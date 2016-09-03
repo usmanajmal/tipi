@@ -18,6 +18,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Load default tip value
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaultTip = defaults.integerForKey("default_tip") ?? 0
+        
+        debugPrint("Default Segment: $\(defaultTip)")
+        
+        tipSegment.selectedSegmentIndex = defaultTip
+        calculateTip([:])
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -21,8 +21,6 @@ class SettingsViewController: UIViewController {
         let title = ["15%", "20%", "25%"]
         let defaults = NSUserDefaults.standardUserDefaults()
         let defaultTip  = defaults.integerForKey("default_tip") ?? 0
-        
-        debugPrint("Default Segment: $\(defaultTip)")
 
         // Change label to currently set default value
         defaultTipLabel.text = title[defaultTip]
