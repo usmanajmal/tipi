@@ -14,6 +14,7 @@
 		B68104A31D78A9BF00573122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68104A11D78A9BF00573122 /* LaunchScreen.storyboard */; };
 		B68104AE1D78A9BF00573122 /* tipoosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68104AD1D78A9BF00573122 /* tipoosTests.swift */; };
 		B68104B91D78A9BF00573122 /* tipoosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68104B81D78A9BF00573122 /* tipoosUITests.swift */; };
+		B6F2B5E31D7B3898006897CC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F2B5E21D7B3898006897CC /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B68104B41D78A9BF00573122 /* tipoosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipoosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68104B81D78A9BF00573122 /* tipoosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipoosUITests.swift; sourceTree = "<group>"; };
 		B68104BA1D78A9BF00573122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6F2B5E21D7B3898006897CC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		B681048C1D78A9BF00573122 = {
 			isa = PBXGroup;
 			children = (
+				B6F2B5E21D7B3898006897CC /* SettingsViewController.swift */,
 				B68104971D78A9BF00573122 /* tipoos */,
 				B68104AC1D78A9BF00573122 /* tipoosTests */,
 				B68104B71D78A9BF00573122 /* tipoosUITests */,
@@ -258,6 +261,7 @@
 			files = (
 				B681049B1D78A9BF00573122 /* ViewController.swift in Sources */,
 				B68104991D78A9BF00573122 /* AppDelegate.swift in Sources */,
+				B6F2B5E31D7B3898006897CC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +486,7 @@
 				B68104BF1D78A9BF00573122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B68104C01D78A9BF00573122 /* Build configuration list for PBXNativeTarget "tipoosTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				B68104C21D78A9BF00573122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B68104C31D78A9BF00573122 /* Build configuration list for PBXNativeTarget "tipoosUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				B68104C51D78A9BF00573122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
