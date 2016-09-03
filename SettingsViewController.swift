@@ -10,6 +10,9 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var defaultTipLabel: UILabel!
+    @IBOutlet weak var tipSegment: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,4 +35,12 @@ class SettingsViewController: UIViewController {
     }
     */
 
+    /**
+     *  Set default tip
+     */
+    @IBAction func setDefaultTip(sender: AnyObject) {
+        let title = ["15%", "20%", "25%"]
+        
+        defaultTipLabel.text = title[tipSegment.selectedSegmentIndex]
+    }
 }
