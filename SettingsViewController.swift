@@ -17,6 +17,19 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let title = ["15%", "20%", "25%"]
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaultTip  = defaults.integerForKey("default_tip") ?? 0
+        
+        debugPrint("Default Segment: $\(defaultTip)")
+
+        // Change label to currently set default value
+        defaultTipLabel.text = title[defaultTip]
+        
+        // Set segment programatically to current set default value
+        //tipSegment.setEnabled(true, forSegmentAtIndex: defaultTip)
+        tipSegment.selectedSegmentIndex = defaultTip
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +53,15 @@ class SettingsViewController: UIViewController {
      */
     @IBAction func setDefaultTip(sender: AnyObject) {
         let title = ["15%", "20%", "25%"]
+        let selectedSegmentIndex = tipSegment.selectedSegmentIndex ?? 0
+        let defaultValue = title[selectedSegmentIndex]
+        let defaults = NSUserDefaults.standardUserDefaults()
         
-        defaultTipLabel.text = title[tipSegment.selectedSegmentIndex]
+        // Save the default value
+        defaults.setInteger(selectedSegmentIndex, forKey: "default_tip")
+        defaults.synchronize()
+        
+        // Change label
+        defaultTipLabel.text = defaultValue
     }
 }
