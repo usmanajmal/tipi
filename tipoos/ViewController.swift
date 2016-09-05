@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipSegment: UISegmentedControl!
     
-    @IBOutlet weak var billLabel: UILabel!
     @IBOutlet weak var tip: UILabel!
     @IBOutlet weak var total: UILabel!
     
@@ -25,6 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // Animate the view on loading
         animateView()
     }
     
@@ -42,6 +42,11 @@ class ViewController: UIViewController {
         
         animateView()
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        // Show keyboard by default
+        billField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,43 +88,45 @@ class ViewController: UIViewController {
     }
     
     /**
-     *  Animate "Bill, Tip, Total", "Bill field, tip label, total label"
-     *  and "horizontal bar, tip segment" by sliding them from left,
-     *  right and bottom respectively
+     *  Animate all UI elements on main view
      */
     func animateView () {
         // Animate Bill, Tip and Total of default Tip
-        let xBillLabel = self.billLabel.frame.origin.x
         let xTip = self.tip.frame.origin.x
         let xTotal = self.tip.frame.origin.x
         
-        let xBillField = self.billField.frame.origin.x
         let xTipLabel = self.tipLabel.frame.origin.x
         let xTotalLabel = self.totalLabel.frame.origin.x
         
+        let yBillField = self.billField.frame.origin.y
+
         let yBar = self.bar.frame.origin.y
         let yTipSegment = self.tipSegment.frame.origin.y
         
-        self.billLabel.frame.origin.x = -100
         self.tip.frame.origin.x = -500
         self.total.frame.origin.x = -1000
         
-        self.billField.frame.origin.x = 1000
         self.tipLabel.frame.origin.x = 1500
         self.totalLabel.frame.origin.x = 2000
+        
+        self.billField.frame.origin.y = -500
         
         self.bar.frame.origin.y = 1000
         self.tipSegment.frame.origin.y = 3000
         
         UIView.animateWithDuration(1, animations: {
-            self.billLabel.frame.origin.x = xBillLabel
+            // Slide from left
             self.tip.frame.origin.x = xTip
             self.total.frame.origin.x = xTotal
             
-            self.billField.frame.origin.x = xBillField
+            // Slide from right
             self.tipLabel.frame.origin.x = xTipLabel
             self.totalLabel.frame.origin.x = xTotalLabel
             
+            // Slide from top
+            self.billField.frame.origin.y = yBillField
+            
+            // Slide from bottom
             self.bar.frame.origin.y = yBar
             self.tipSegment.frame.origin.y = yTipSegment
         })
