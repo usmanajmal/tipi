@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipSegment: UISegmentedControl!
     
     @IBOutlet weak var tip: UILabel!
-    @IBOutlet weak var total: UILabel!
+    // @IBOutlet weak var total: UILabel!
     
     @IBOutlet weak var resultView: UIView!
     
@@ -96,7 +96,7 @@ class ViewController: UIViewController {
     func animateView () {
         // Animate Bill, Tip and Total of default Tip
         let xTip = self.tip.frame.origin.x
-        let xTotal = self.tip.frame.origin.x
+        // let xTotal = self.tip.frame.origin.x
         
         let xTipLabel = self.tipLabel.frame.origin.x
         let xTotalLabel = self.totalLabel.frame.origin.x
@@ -106,7 +106,7 @@ class ViewController: UIViewController {
         let yTipSegment = self.tipSegment.frame.origin.y
         
         self.tip.frame.origin.x = -500
-        self.total.frame.origin.x = -1000
+        // self.total.frame.origin.x = -1000
         
         self.tipLabel.frame.origin.x = 1500
         self.totalLabel.frame.origin.x = 2000
@@ -120,7 +120,7 @@ class ViewController: UIViewController {
         UIView.animateWithDuration(1, animations: {
             // Slide from left
             self.tip.frame.origin.x = xTip
-            self.total.frame.origin.x = xTotal
+            // self.total.frame.origin.x = xTotal
             
             // Slide from right
             self.tipLabel.frame.origin.x = xTipLabel
@@ -138,13 +138,14 @@ class ViewController: UIViewController {
         })
     }
     
+    /**
+     *  Reset placeholder, tip label, total label
+     */
     func reset() {
         billField.text = ""
         billField.placeholder = "Add bill"
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
-        
-        
     }
 
 

@@ -33,7 +33,12 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+- I wasn't able to use NSDate. Used NSTimer for the timer functionality
+- Had trouble with solving a warning related to usage of #selector
+  instead of creatin a new selector but figured it out finally.
+- Had trouble sometimes with navigating between files in Xcode sometimes
+- Couldn't define static array for tip percentages
+ 
 
 ## License
 
