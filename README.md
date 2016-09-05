@@ -14,20 +14,22 @@ The following **required** functionality is complete:
 * [x] Settings page to change the default tip percentage.
 
 The following **optional** features are implemented:
-* [x] UI animations
-* [x] Remembering the bill amount across app restarts (if <10mins)
-* [ ] Using locale-specific currency and currency thousands separators.
-* [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* **[x]** UI animations
+* **[x]** Remembering the bill amount across app restarts (if <10mins)
+* **[x]** Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* **[x]** The Tip calculator has a very primitive UI. Feel free to play with colors, layout, or even modify the UI to improve it.
+* **[ ]** Using locale-specific currency and currency thousands separators.
+* **[ ]** Add a light/dark color theme
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] Feature for splitting the total amount between 2,3 and 4 people
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://imgur.com/a/Ysq8R' title='Tipi Video Walkthrough' width='' alt='Tipi Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

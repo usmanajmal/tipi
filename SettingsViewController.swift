@@ -28,15 +28,6 @@ class SettingsViewController: UIViewController {
         // Set segment programatically to current set default value
         //tipSegment.setEnabled(true, forSegmentAtIndex: defaultTip)
         tipSegment.selectedSegmentIndex = defaultTip
-        
-        /* Animate appearance of default Tip
-        self.defaultTipLabel.alpha = 0
-        UIView.animateWithDuration(2, animations: {
-            self.defaultTipLabel.alpha = 1
-        })*/
-        
-        tipHeartBeat()
-        
     }
 
     override func didReceiveMemoryWarning() {
