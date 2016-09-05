@@ -89,9 +89,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bar" destination="V82-hf-A9l" id="8p1-DL-dwN"/>
                         <outlet property="billField" destination="ax9-j2-SEV" id="9Hv-ca-cNC"/>
+                        <outlet property="billLabel" destination="331-i2-JP9" id="f3K-bV-ceh"/>
+                        <outlet property="tip" destination="hS7-QP-5vg" id="8RR-Ls-Qe1"/>
                         <outlet property="tipLabel" destination="OfZ-y5-EiB" id="Iau-a9-obF"/>
                         <outlet property="tipSegment" destination="ejE-ts-nQ9" id="Puj-uk-eFw"/>
+                        <outlet property="total" destination="OnB-H2-vqI" id="8e8-HP-qWl"/>
                         <outlet property="totalLabel" destination="6hx-38-pWj" id="88H-Sx-na2"/>
                     </connections>
                 </viewController>

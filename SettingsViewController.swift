@@ -28,13 +28,21 @@ class SettingsViewController: UIViewController {
         // Set segment programatically to current set default value
         //tipSegment.setEnabled(true, forSegmentAtIndex: defaultTip)
         tipSegment.selectedSegmentIndex = defaultTip
+        
+        /* Animate appearance of default Tip
+        self.defaultTipLabel.alpha = 0
+        UIView.animateWithDuration(2, animations: {
+            self.defaultTipLabel.alpha = 1
+        })*/
+        
+        tipHeartBeat()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -61,5 +69,20 @@ class SettingsViewController: UIViewController {
         
         // Change label
         defaultTipLabel.text = defaultValue
+        
+        tipHeartBeat()
+    }
+    
+    /**
+     *  Use an animation to transform text size
+     *  Source: http://stackoverflow.com/questions/25100750/animating-a-label-to-increase-and-decrease-in-size
+     */
+    func tipHeartBeat() {
+        let animation = CABasicAnimation(keyPath: "transform.scale")
+        animation.toValue = NSNumber(float: 0.9)
+        animation.duration = 0.3
+        animation.repeatCount = 2.0
+        animation.autoreverses = true
+        self.defaultTipLabel.layer.addAnimation(animation, forKey: nil)
     }
 }
