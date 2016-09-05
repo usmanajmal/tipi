@@ -101,37 +101,30 @@ class ViewController: UIViewController {
      *  Animate all UI elements on main view
      */
     func animateView () {
-        // Animate Bill, Tip and Total of default Tip
-        let xTip = self.tip.frame.origin.x
-        // let xTotal = self.tip.frame.origin.x
         
+        // Store current value in order to set them at end of animation
+        let xTip = self.tip.frame.origin.x
         let xTipLabel = self.tipLabel.frame.origin.x
         let xTotalLabel = self.totalLabel.frame.origin.x
-        
+        let xResultView = self.resultView.frame.origin.x
         let yBillField = self.billField.frame.origin.y
-
         let yTipSegment = self.tipSegment.frame.origin.y
         
-        self.tip.frame.origin.x = -500
-        // self.total.frame.origin.x = -1000
-        
-        self.tipLabel.frame.origin.x = 1500
-        self.totalLabel.frame.origin.x = 2000
-        
+        // Change init position of the elements
+        self.tip.frame.origin.x = 1000
+        self.tipLabel.frame.origin.x = 2000
+        self.totalLabel.frame.origin.x = 3000
+        self.resultView.frame.origin.x = 4000
         self.billField.frame.origin.y = -500
-        
         self.tipSegment.frame.origin.y = 3000
-        
-        self.resultView.alpha = 0
+        // self.resultView.alpha = 0
         
         UIView.animateWithDuration(1, animations: {
-            // Slide from left
-            self.tip.frame.origin.x = xTip
-            // self.total.frame.origin.x = xTotal
-            
             // Slide from right
+            self.tip.frame.origin.x = xTip
             self.tipLabel.frame.origin.x = xTipLabel
             self.totalLabel.frame.origin.x = xTotalLabel
+            self.resultView.frame.origin.x = xResultView
             
             // Slide from top
             self.billField.frame.origin.y = yBillField
@@ -141,7 +134,7 @@ class ViewController: UIViewController {
             
             // Fade in/out animation for blue view
             // containing result of the app i.e. Tip and Total
-            self.resultView.alpha = 1
+            // self.resultView.alpha = 1
         })
     }
     
