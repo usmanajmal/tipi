@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  tipoos
+//  tipi
 //
 //  Created by Usman Ajmal on 9/1/16.
 //  Copyright © 2016 worotos. All rights reserved.

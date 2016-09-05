@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  tipoos
+//  tipi
 //
 //  Created by Usman Ajmal on 9/1/16.
 //  Copyright © 2016 worotos. All rights reserved.
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tip: UILabel!
     @IBOutlet weak var total: UILabel!
     
-    @IBOutlet weak var bar: UIView!
+    @IBOutlet weak var resultView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +85,9 @@ class ViewController: UIViewController {
         // Version 3
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
+        // Reset bill, tip and total after 10 minutes
+        NSTimer.scheduledTimerWithTimeInterval(600.0, target: self, selector: #selector(ViewController.reset), userInfo: nil, repeats: false)
     }
     
     /**
@@ -100,7 +103,6 @@ class ViewController: UIViewController {
         
         let yBillField = self.billField.frame.origin.y
 
-        let yBar = self.bar.frame.origin.y
         let yTipSegment = self.tipSegment.frame.origin.y
         
         self.tip.frame.origin.x = -500
@@ -111,8 +113,9 @@ class ViewController: UIViewController {
         
         self.billField.frame.origin.y = -500
         
-        self.bar.frame.origin.y = 1000
         self.tipSegment.frame.origin.y = 3000
+        
+        self.resultView.alpha = 0
         
         UIView.animateWithDuration(1, animations: {
             // Slide from left
@@ -127,10 +130,23 @@ class ViewController: UIViewController {
             self.billField.frame.origin.y = yBillField
             
             // Slide from bottom
-            self.bar.frame.origin.y = yBar
             self.tipSegment.frame.origin.y = yTipSegment
+            
+            // Fade in/out animation for blue view
+            // containing result of the app i.e. Tip and Total
+            self.resultView.alpha = 1
         })
     }
+    
+    func reset() {
+        billField.text = ""
+        billField.placeholder = "Add bill"
+        tipLabel.text = "$0.00"
+        totalLabel.text = "$0.00"
+        
+        
+    }
+
 
 }
 
