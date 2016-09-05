@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipSegment: UISegmentedControl!
-    
     @IBOutlet weak var tip: UILabel!
-    // @IBOutlet weak var total: UILabel!
-    
     @IBOutlet weak var resultView: UIView!
+    
+    @IBOutlet weak var shareBy2Label: UILabel!
+    @IBOutlet weak var shareBy3Label: UILabel!
+    @IBOutlet weak var shareBy4Label: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +88,11 @@ class ViewController: UIViewController {
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
         
+        // Calculate tips shared by x number of people
+        shareBy2Label.text = String(format: "$%.2f", total/2)
+        shareBy3Label.text = String(format: "$%.2f", total/3)
+        shareBy4Label.text = String(format: "$%.2f", total/4)
+        
         // Reset bill, tip and total after 10 minutes
         NSTimer.scheduledTimerWithTimeInterval(600.0, target: self, selector: #selector(ViewController.reset), userInfo: nil, repeats: false)
     }
@@ -146,6 +153,9 @@ class ViewController: UIViewController {
         billField.placeholder = "Add bill"
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        shareBy2Label.text = "$0.00"
+        shareBy3Label.text = "$0.00"
+        shareBy4Label.text = "$0.00"
     }
 
 

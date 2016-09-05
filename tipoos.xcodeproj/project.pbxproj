@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B63B89311D7B4186000EF6C3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63B89301D7B4186000EF6C3 /* SettingsViewController.swift */; };
+		B67AAD5C1D7E2096001D73D7 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67AAD5B1D7E2096001D73D7 /* Media.xcassets */; };
 		B68104991D78A9BF00573122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68104981D78A9BF00573122 /* AppDelegate.swift */; };
 		B681049B1D78A9BF00573122 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B681049A1D78A9BF00573122 /* ViewController.swift */; };
 		B681049E1D78A9BF00573122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B681049C1D78A9BF00573122 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		B63B89301D7B4186000EF6C3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B67AAD5B1D7E2096001D73D7 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		B68104951D78A9BF00573122 /* tipoos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipoos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68104981D78A9BF00573122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B681049A1D78A9BF00573122 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		B681048C1D78A9BF00573122 = {
 			isa = PBXGroup;
 			children = (
+				B67AAD5B1D7E2096001D73D7 /* Media.xcassets */,
 				B63B89301D7B4186000EF6C3 /* SettingsViewController.swift */,
 				B68104971D78A9BF00573122 /* tipoos */,
 				B68104AC1D78A9BF00573122 /* tipoosTests */,
@@ -234,6 +237,7 @@
 			files = (
 				B68104A31D78A9BF00573122 /* LaunchScreen.storyboard in Resources */,
 				B68104A01D78A9BF00573122 /* Assets.xcassets in Resources */,
+				B67AAD5C1D7E2096001D73D7 /* Media.xcassets in Resources */,
 				B681049E1D78A9BF00573122 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
