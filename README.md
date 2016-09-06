@@ -15,12 +15,12 @@ The following **required** functionality is complete:
 * [x] Settings page to change the default tip percentage.
 
 The following **optional** features are implemented:
-* **[x]** UI animations
-* **[x]** Remembering the bill amount across app restarts (if <10mins)
-* **[x]** Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
-* **[x]** The Tip calculator has a very primitive UI. Feel free to play with colors, layout, or even modify the UI to improve it.
-* **[ ]** Using locale-specific currency and currency thousands separators.
-* **[ ]** Add a light/dark color theme
+* [x] UI animations
+* [x] Remembering the bill amount across app restarts (if <10mins)
+* [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [x] The Tip calculator has a very primitive UI. Feel free to play with colors, layout, or even modify the UI to improve it.
+* [ ] Using locale-specific currency and currency thousands separators.
+* [ ] Add a light/dark color theme
 
 The following **additional** features are implemented:
 
@@ -30,7 +30,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://imgur.com/a/Ysq8R' title='Tipi Video Walkthrough' width='' alt='Tipi Video Walkthrough' />
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/Ysq8R"><a href="//imgur.com/Ysq8R"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
