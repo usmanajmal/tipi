@@ -4,7 +4,8 @@
 
 Submitted by: **Usman Ajmal**
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
+            (while some serious people-watching at coffee-shop)
 
 ## User Stories
 
